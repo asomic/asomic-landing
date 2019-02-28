@@ -193,7 +193,7 @@
             <img src="{{ asset('/img/logo.png') }}" alt="asomic">
           </div>
           <div class="copy">
-            <p>asomic 2019. Todos los derechos reservados</p>
+            <p>asomic 2018-{{ date('Y') }}. Todos los derechos reservados</p>
           </div>
           <div class="rrss">
             <a href="#"><img src="{{ asset('/ico/ico-facebook.svg') }}" alt="Facebook"></a>
