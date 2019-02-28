@@ -1332,7 +1332,7 @@ body {
         justify-content: space-between; }
         .site-footer-wrapper .site-footer .contacto .formulario form input {
           width: 100%; }
-          .site-footer-wrapper .site-footer .contacto .formulario form input:nth-child(-n+2) {
+          .site-footer-wrapper .site-footer .contacto .formulario form input:nth-child(-n+3) {
             width: 49%; }
         .site-footer-wrapper .site-footer .contacto .formulario form textarea {
           width: 100%; }
