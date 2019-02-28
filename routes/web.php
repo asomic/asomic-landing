@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::post('/enviado', 'MailController@sendmail');
+Route::post('/enviado', 'MailController@sendmail')->name('ruta');

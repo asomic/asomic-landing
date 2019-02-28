@@ -171,6 +171,48 @@ p {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
 
+.lds-ripple {
+  position: relative;
+  width: 100%; }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    -webkit-animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite; }
+    .lds-ripple div:nth-child(2) {
+      -webkit-animation-delay: -0.5s;
+      animation-delay: -0.5s; }
+
+@-webkit-keyframes lds-ripple {
+  0% {
+    top: 12px;
+    left: 12px;
+    width: 0;
+    height: 0;
+    opacity: 1; }
+  100% {
+    top: -1px;
+    left: -1px;
+    width: 28px;
+    height: 28px;
+    opacity: 0; } }
+
+@keyframes lds-ripple {
+  0% {
+    top: 12px;
+    left: 12px;
+    width: 0;
+    height: 0;
+    opacity: 1; }
+  100% {
+    top: -1px;
+    left: -1px;
+    width: 28px;
+    height: 28px;
+    opacity: 0; } }
+
 .fadeIn {
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s; }
@@ -253,6 +295,12 @@ p {
   position: sticky;
   left: 0;
   right: 0; }
+
+.d-none {
+  display: none; }
+
+.disabled {
+  cursor: disabled; }
 
 body {
   -webkit-box-sizing: border-box;
@@ -1149,13 +1197,21 @@ body {
       .site-footer-wrapper .site-footer .contacto .formulario {
         padding-bottom: 52px; }
         .site-footer-wrapper .site-footer .contacto .formulario form input, .site-footer-wrapper .site-footer .contacto .formulario form textarea {
-          border: 0.75px solid rgba(255, 255, 255, 0.7);
+          border: 0.75px solid rgba(255, 255, 255, 0.9);
           -webkit-transition: all ease 0.3s;
           -o-transition: all ease 0.3s;
           transition: all ease 0.3s;
           border-radius: 2px;
           color: white;
           background: transparent; }
+          .site-footer-wrapper .site-footer .contacto .formulario form input::-webkit-input-placeholder, .site-footer-wrapper .site-footer .contacto .formulario form textarea::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.6); }
+          .site-footer-wrapper .site-footer .contacto .formulario form input:-ms-input-placeholder, .site-footer-wrapper .site-footer .contacto .formulario form textarea:-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.6); }
+          .site-footer-wrapper .site-footer .contacto .formulario form input::-ms-input-placeholder, .site-footer-wrapper .site-footer .contacto .formulario form textarea::-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.6); }
+          .site-footer-wrapper .site-footer .contacto .formulario form input::placeholder, .site-footer-wrapper .site-footer .contacto .formulario form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6); }
           .site-footer-wrapper .site-footer .contacto .formulario form input:focus, .site-footer-wrapper .site-footer .contacto .formulario form textarea:focus {
             border: 0.75px solid #99E600;
             outline: none; }
@@ -1174,6 +1230,17 @@ body {
           padding: 12px 13px;
           font-size: 16px;
           margin-bottom: 17px; }
+        .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario {
+          font-size: 15px; }
+          .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-cargando, .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-enviado, .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-error {
+            padding: 14px 0 32px 4px; }
+            .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-cargando p, .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-enviado p, .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-error p {
+              color: white; }
+          .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-cargando p {
+            padding-left: 40px;
+            padding-top: 4px;
+            padding-bottom: 0;
+            margin: 0; }
         .site-footer-wrapper .site-footer .contacto .formulario form button {
           width: 100%;
           background: white;
@@ -1332,7 +1399,7 @@ body {
         justify-content: space-between; }
         .site-footer-wrapper .site-footer .contacto .formulario form input {
           width: 100%; }
-          .site-footer-wrapper .site-footer .contacto .formulario form input:nth-child(-n+3) {
+          .site-footer-wrapper .site-footer .contacto .formulario form input:nth-child(-n+2) {
             width: 49%; }
         .site-footer-wrapper .site-footer .contacto .formulario form textarea {
           width: 100%; }

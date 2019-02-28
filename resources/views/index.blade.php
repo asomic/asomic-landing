@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>asomic - Agencia Digital</title>
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:400,600,700,800" rel="stylesheet">
     <link href="{{ asset('/css/hamburgers.css') }}" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/css/app.min.css') }}">
   </head>
   <body>
@@ -176,13 +178,27 @@
             </h3>
           </div>
           <div class="formulario">
-            <form action="{{ url('/enviado') }}" method="POST">
-              @csrf
-              <input type="text" placeholder="Tu Nombre" name="name">
-              <input type="text" placeholder="Tu Correo" name="email">
-              <input type="text" placeholder="¿En qué te podemos ayudar?" name="theme">
-              <textarea name="message" rows="8" cols="80" placeholder="Cuéntanos sobre tu proyecto" name="message"></textarea>
-              <button id="enviarContacto" onClick="this.form.submit(); this.disabled=true; this.value='Enviando…'; ">Enviar</button>
+            <form id="formulario" action="{{ route('ruta') }}">
+              <input type="text" class="input-nombre" placeholder="Tu Nombre" name="name" required>
+              <input type="email" class="input-correo" placeholder="Tu Correo" name="email" required>
+              <input type="text" class="input-tema" placeholder="¿En qué te podemos ayudar?" name="tema" required>
+              <textarea rows="8" cols="80" class="text-mensaje" placeholder="Cuéntanos sobre tu proyecto" name="message" required></textarea>
+              <div class="mensaje-formulario">
+                <div class="mensaje-error d-none fadeIn">
+                  <p>Error</p>
+                </div>
+                <div class="mensaje-cargando d-none fadeIn">
+                  <div class="lds-ripple">
+                    <div></div>
+                    <p>Enviando su mensaje</p>
+                  </div>
+                  {{-- <p>Enviando Mensaje</p> --}}
+                </div>
+                <div class="mensaje-enviado d-none fadeIn">
+                  <p>Mensaje enviado. Nos Contactaremos pronto contigo</p>
+                </div>
+              </div>
+              <button type="button" id="enviarContacto">Enviar</button>
             </form>
           </div>
         </section>

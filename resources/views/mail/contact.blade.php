@@ -11,7 +11,7 @@
   Detalle
 </h4>
 
-<p>Motivo: {{$data['theme']}}</p>
+<p>Motivo: {{$data['subject']}}</p>
 
 <h4>
   Mensaje

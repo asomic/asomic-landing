@@ -152,4 +152,64 @@ $(document).ready(function(){
 
 
 
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+
+  // Form Validation
+  /* Create new Post */
+  $("#enviarContacto").click(function(e) {
+      var form_action = $('#formulario').attr('action');
+      var nombre = $(".input-nombre").val();
+      var correo = $(".input-correo").val();
+      var asunto = $(".input-tema").val();
+      var mensaje = $(".text-mensaje").val();
+
+      $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
+
+      $.post( form_action, { name: nombre, email: correo, subject: asunto, message: mensaje })
+        .done(function(data) {
+          // console.log('success');
+          if (data['errors']) {
+            $('.mensaje-formulario .mensaje-cargando').addClass('d-none');
+            $.each(data['errors'], function( index, value ) {
+             // alert( index + ": " + value );
+            });
+          } else {
+            $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
+            if (data['success']) {
+              $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
+              $('.mensaje-formulario .mensaje-enviado').toggleClass('d-none')
+              .delay(4000).queue(function(){
+                $('.mensaje-formulario .mensaje-enviado').toggleClass('d-none').dequeue();
+              });
+            }
+            // $('#enviarContacto').attr('disabled','disabled');
+            // $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
+            // $('.mensaje-formulario .mensaje-enviado').toggleClass('d-none')
+            // .delay(4000).queue(function(){
+            //   $('.mensaje-formulario .mensaje-enviado').toggleClass('d-none').dequeue();
+            // });
+          }
+        }
+      ).fail(function(data){
+
+          // $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
+          $('.mensaje-formulario .mensaje-error').toggleClass('d-none');
+
+      });
+  });
+
+
+
+
+
+
+
+
+
+
+
 });
