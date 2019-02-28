@@ -1,0 +1,1715 @@
+// Hoja de estilos para asomic.com
+//   Creado por: Juan Berrios
+
+/* Reset CSS */
+@import 'reset'
+
+//Colors
+$green: #99E600
+$purple: #2B0063
+$light-gray: #E5E5E5
+$gray: #9D9D9D
+
+/* Color Class
+.color-green
+  color: $green
+.color-purple
+  color: $purple
+
+/* Effects
+@keyframes fadeIn
+  0%
+   opacity: 0
+   visibility: hidden
+  100%
+   opacity: 1
+   visibility: visible
+
+@keyframes fadeOut
+  0%
+   opacity: 1
+   visibility: visible
+  100%
+   opacity: 0
+   visibility: hidden
+
+@keyframes updown
+  0%
+    transform: translate(0, 0)
+  50%
+    transform: translate(0, -5px)
+  100%
+    transform: translate(0, 0)
+
+@keyframes fadeInUp
+  from
+    opacity: 0
+    -webkit-transform: translate3d(0, 100%, 0)
+    transform: translate3d(0, 100%, 0)
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+@keyframes fadeInRight
+  from
+    opacity: 0
+    -webkit-transform: translate3d(100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+@keyframes slideInRight
+  from
+    -webkit-transform: translate3d(100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
+    visibility: visible
+  to
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+.fadeIn
+  animation: fadeIn 1s
+.fadeOut
+  animation: fadeOut 1s
+.updown
+  animation: fadeIn 1s, updown 1s infinite
+.fadeInUp
+  -webkit-animation-name: fadeInUp
+  animation-name: fadeInUp
+.fadeInRight
+  -webkit-animation-name: fadeInRight
+  animation-name: fadeInRight
+
+.fast
+  -webkit-animation-duration: 0.7s
+  animation-duration: 0.7s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+.slow
+  -webkit-animation-duration: 1.5s
+  animation-duration: 1.5s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+.special-slow
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+.header-slow
+  -webkit-animation-duration: 0.8s
+  animation-duration: 0.8s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+.middle-slow
+  -webkit-animation-duration: 2s
+  animation-duration: 2s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+.ultra-slow
+  -webkit-animation-duration: 2s
+  animation-duration: 2s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+.delay-10
+  animation-delay: 1s
+.delay-15
+  animation-delay: 1.5s
+.delay-20
+  animation-delay: 2s
+.delay-25
+  animation-delay: 2.5s
+
+/* Lockers
+.lock-scroll
+  overflow: hidden
+  height: 100%
+
+.lock-header
+  position: sticky
+  left: 0
+  right: 0
+
+body
+  box-sizing: border-box
+  background: white
+  font-family: 'Encode Sans Semi Condensed', sans-serif
+  overflow-x: hidden
+  width: 100%
+
+/* Header
+.presentacion
+  color: white
+  position: relative
+  &::after
+    content: ''
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 180%
+    z-index: -1
+    position: absolute
+    background: url('../img/background_asomic.jpg') center / cover, linear-gradient(130.92deg, #320073 6.18%, #0C5F93 39.91%, #2A0061 80.64%)
+    background-blend-mode: multiply
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+  header.main-header
+    width: 100%
+    margin: auto
+    padding: 42px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 87%
+    z-index: 999
+    .branding
+      z-index: 100
+      a
+        img
+          width: 120px
+          height: auto
+    .menu
+      .the-menu
+        display: none
+        a
+          color: white
+          text-decoration: none
+          font-weight: 600
+          line-height: normal
+          font-size: 17px
+          text-align: center
+          letter-spacing: 0.06em
+          margin-top: 18px
+          margin-bottom: 18px
+      .active-menu
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-content: center
+        position: fixed
+        width: 100%
+        height: 100vh
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        padding: 40px 23px
+        text-align: center
+        background: linear-gradient(272.47deg, #090014 -34.62%, #410C87 115.2%)
+        a
+          width: 100%
+          display: inline-block
+      .hamburger
+        padding: 0
+        .hamburger-box
+          .hamburger-inner
+            background: $light-gray
+            height: 3px
+            border-radius: 1px
+            &::after, &::before
+              background: $light-gray
+              height: 3px
+              border-radius: 1px
+    .rrss
+      display: none
+      a
+        // margin-left: 20px
+        margin: 0 14px
+        opacity: 1
+        transition: all ease 0.3s
+        &:hover
+          opacity: 0.7
+        img
+          width: 20px
+    .active-rrss
+      z-index: 100
+      display: flex
+      justify-content: center
+      width: 100%
+      left: 0
+      right: 0
+      position: fixed
+      bottom: 7%
+      text-align: center
+  .intro-message
+    padding: 70px 23px 60px 0
+    margin: auto
+    max-width: 76.5%
+    h1
+      font-weight: 600
+      line-height: 35px
+      font-size: 27px
+      letter-spacing: 0.03em
+  .godown
+    padding: 20px 28px 40px
+    text-align: right
+    cursor: pointer
+
+@media (min-width: 768px)
+  .presentacion
+    &::after
+      height: 175%
+    header.main-header
+      padding: 52px 0
+      margin: auto
+      max-width: 89%
+      .branding
+        a
+          img
+            width: 130px
+      .menu
+        .the-menu
+          a
+        .active-menu
+          padding: 40px 40px
+          a
+        .hamburger
+          .hamburger-box
+            .hamburger-inner
+              &::after, &::before
+      .rrss
+        a
+          img
+      .active-rrss
+    .intro-message
+      padding: 90px 0 75px 0
+      max-width: 81%
+      margin: auto
+      h1
+        // width: 60%
+        font-size: 30px
+        line-height: 42px
+    .godown
+      padding: 20px 40px 40px
+
+@media (min-width: 900px)
+  .presentacion
+    &::after
+      height: 160%
+    header.main-header
+      padding: 58px 0
+      // margin: auto
+      max-width: 90%
+      .branding
+        a
+          img
+            width: 130px
+      .menu
+        .the-menu
+          a
+        .active-menu
+          a
+        .hamburger
+          .hamburger-box
+            .hamburger-inner
+              &::after, &::before
+      .rrss
+        a
+          img
+      .active-rrss
+    .intro-message
+      // margin: auto
+      // margin-left: 105px
+      max-width: 78.5%
+      padding: 75px 0 64px 0
+      h1
+        // width: 50%
+        font-size: 34px
+        line-height: 46px
+    .godown
+      padding: 20px 0 40px
+      margin: auto
+      max-width: 78.5%
+
+@media (min-width: 1200px)
+  .presentacion
+    &::after
+    header.main-header
+      padding: 60px 0 60px
+      // margin: auto
+      max-width: 87%
+      .branding
+        a
+          img
+            width: 120px
+      .menu
+        .the-menu
+          display: inherit
+          a
+            font-size: 14px
+            margin: 0 28px
+            text-align: center
+            letter-spacing: 0.09em
+            font-weight: 400
+            border-bottom: solid 1px transparent
+            transition: all ease 0.4s
+            padding-bottom: 3px
+            &:hover, &:focus
+              border-bottom: solid 1px white
+            // &:last-child
+            //   margin-right: 0
+        .active-menu
+          a
+        .hamburger
+          display: none
+          .hamburger-box
+            .hamburger-inner
+              &::after, &::before
+      .rrss
+        display: inherit
+        a
+          margin-left: 10px
+          &:last-child
+            margin-right: 0
+          img
+            width: 18px
+      .active-rrss
+    .intro-message
+      margin: auto
+      max-width: 76%
+      // margin-left: 180px
+      padding: 110px 0 80px
+      h1
+        // width: 60%
+        line-height: 50px
+        font-size: 36px
+        letter-spacing: 0.03em
+    .godown
+      // padding: 20px 60px 40px
+
+@media (min-width: 1400px)
+  .presentacion
+    &::after
+      height: 170%
+    header.main-header
+      margin: auto
+      max-width: 86%
+      padding: 74px 0 60px
+      .branding
+        a
+          img
+            width: 130px
+      .menu
+        .the-menu
+          a
+            font-size: 15px
+            margin: 0 32px
+        .active-menu
+          a
+        .hamburger
+          .hamburger-box
+            .hamburger-inner
+              &::after, &::before
+      .rrss
+        a
+          margin-left: 14px
+          img
+            width: 20px
+
+      .active-rrss
+    .intro-message
+      // margin: auto
+      max-width: 80%
+      padding: 125px 60px 100px 60px
+      h1
+        line-height: 53px
+        font-size: 40px
+        letter-spacing: 0.03em
+    .godown
+      margin: auto
+      max-width: 80%
+      padding: 20px 0 40px
+
+@media (min-width: 1600px)
+  .presentacion
+    &::after
+      height: 160%
+    header.main-header
+      margin: auto
+      max-width: 83%
+      padding-top: 80px
+      padding-bottom: 80px
+      padding-left: 0
+      padding-right: 0
+      .branding
+        a
+          img
+            width: 150px
+      .menu
+        .the-menu
+          a
+            font-size: 17px
+        .active-menu
+          a
+        .hamburger
+          .hamburger-box
+            .hamburger-inner
+              &::after, &::before
+      .rrss
+        a
+          img
+            width: 22px
+      .active-rrss
+    .intro-message
+      // margin: auto
+      max-width: 76.5%
+      padding-top: 140px
+      padding-bottom: 135px
+      padding-left: 80px
+      padding-right: 80px
+      h1
+        // width: 50%
+        line-height: 60px
+        font-size: 43px
+        letter-spacing: 0.03em
+    .godown
+      margin: auto
+      padding: 20px 80px 40px
+      max-width: 80%
+
+@media (min-width: 1900px)
+  .presentacion
+    &::after
+    header.main-header
+      // margin: auto
+      // max-width: 83%
+      // padding-top: 70px
+      // padding-bottom: 70px
+      padding-top: 84px
+      padding-bottom: 80px
+      // padding-left: 0
+      // padding-right: 0
+      max-width: 76%
+      .branding
+        a
+          img
+            // width: 150px
+      .menu
+        .the-menu
+          a
+            // font-size: 17px
+            margin: 0 34px
+        .active-menu
+          a
+        .hamburger
+          .hamburger-box
+            .hamburger-inner
+              &::after, &::before
+      .rrss
+        a
+          img
+            width: 22px
+      .active-rrss
+    .intro-message
+      // margin: auto
+      max-width: 71.5%
+      padding-top: 160px
+      padding-bottom: 170px
+      // padding-left: 80px
+      // padding-right: 80px
+      h1
+        font-size: 46px
+        line-height: 62px
+    .godown
+      // margin: auto
+      // padding: 20px 80px 40px
+      // max-width: 80%
+
+/* Contenido
+.quienes-somos-wrapper
+  .quienes-somos
+    background: linear-gradient(299.2deg, #090014 1.88%, #410C87 98.18%)
+    border-radius: 5px 0 0 5px
+    color: white
+    margin: auto
+    margin-right: 0
+    max-width: 89%
+    .texto
+      padding: 62px 60px 62px 41px
+      h6
+        color: $light-gray
+        text-transform: uppercase
+        font-weight: 800
+        line-height: 16px
+        font-size: 11px
+        letter-spacing: 0.2em
+        margin-bottom: 129px
+      h3
+        font-weight: 600
+        line-height: 30px
+        font-size: 22px
+    .img
+      display: none
+
+@media (min-width: 768px)
+  .quienes-somos-wrapper
+    .quienes-somos
+      // margin: auto
+      margin-right: 0
+      display: grid
+      max-width: 90.5%
+      grid-template-columns: 1fr 0.8fr
+      position: relative
+      box-sizing: border-box
+      .texto
+        padding: 62px 68px 62px 54px
+        h6
+        h3
+          font-size: 22px
+          line-height: 30px
+          span
+            cursor: pointer
+      .img
+        display: inherit
+        height: 100%
+        background: black
+        background-image: url('../img/quienes-somos.jpg')
+        background-position: center
+        background-size: cover
+        position: relative
+        transition: all ease 0.2s
+
+@media (min-width: 900px)
+  .quienes-somos-wrapper
+    .quienes-somos
+      // margin: auto
+      margin-right: 0
+      max-width: 89.5%
+      .texto
+        padding: 62px 60px 62px 60px
+        h6
+        h3
+          font-size: 24px
+          line-height: 34px
+          width: 90%
+      .img
+
+@media (min-width: 1200px)
+  .quienes-somos-wrapper
+    .quienes-somos
+      // margin-left: 180px
+      // margin: auto
+      max-width: 88%
+      // max-width: 100%
+      margin-right: 0
+      // display: grid
+      grid-template-columns: 1fr 0.9fr
+      // position: relative
+      // box-sizing: border-box
+      .texto
+        padding: 62px 60px 62px 76px
+        h6
+        h3
+          font-size: 24px
+          line-height: 34px
+          width: 70%
+          // letter-spacing: 0.01em
+      .img
+        // display: inherit
+        // height: 100%
+        // background: red
+        // position: relative
+
+@media (min-width: 1400px)
+  .quienes-somos-wrapper
+    .quienes-somos
+      // grid-template-columns: 1fr 0.75fr
+      // margin: auto
+      margin-right: 0
+      max-width: 86%
+      .texto
+        padding: 62px 120px 62px 90px
+        h6
+          // line-height: 19px
+          font-size: 12px
+          letter-spacing: 0.3em
+          margin-bottom: 190px
+        h3
+          // width: 100%
+          // max-width: 400px
+          line-height: 36px
+          font-size: 26px
+      .img
+
+@media (min-width: 1600px)
+  .quienes-somos-wrapper
+    .quienes-somos
+      grid-template-columns: 1fr 0.75fr
+      // margin: auto
+      margin-right: 0
+      max-width: 84%
+      .texto
+        padding: 62px 120px 62px 100px
+        h6
+          // line-height: 19px
+          font-size: 13px
+          // letter-spacing: 0.2em
+          margin-bottom: 200px
+        h3
+          width: 56%
+          // max-width: 400px
+          // line-height: 40px
+          // font-size: 29px
+          font-size: 28px
+          line-height: 38px
+      .img
+
+@media (min-width: 1900px)
+  .quienes-somos-wrapper
+    .quienes-somos
+      // grid-template-columns: 1fr 0.75fr
+      // margin: auto
+      // margin-right: 0
+      max-width: 82%
+      .texto
+        padding: 74px 120px 74px 100px
+        h6
+          // line-height: 19px
+          font-size: 14px
+          letter-spacing: 0.25em
+        h3
+          // width: 100%
+          // max-width: 400px
+          line-height: 40px
+          font-size: 29px
+      .img
+
+/* Servicios
+.servicios
+  padding: 67px 23px 78px 0
+  margin: auto
+  max-width: 76%
+  h6.light-title
+    font-weight: 800
+    line-height: 16px
+    font-size: 11px
+    color: $gray
+    margin-bottom: 26px
+    text-transform: uppercase
+    letter-spacing: 0.4em
+  .contenido
+    h2
+      font-weight: bold
+      line-height: normal
+      font-size: 28px
+      width: 100%
+      color: $purple
+      margin-bottom: 54px
+    .items-servicios
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-column-gap: 30px
+      grid-row-gap: 54px
+      .item
+        img
+          margin-bottom: 16px
+          height: 60px
+        h4
+          font-weight: 600
+          line-height: normal
+          font-size: 20px
+          color: $purple
+
+@media (min-width: 768px)
+  .servicios
+    padding: 100px 0 140px 0
+    display: grid
+    // margin: auto
+    max-width: 81%
+    grid-template-columns: 10px 1fr
+    h6.light-title
+      transform: rotate(-90deg)
+      margin-top: 84px
+      margin-bottom: 0
+      align-self: start
+    .contenido
+      padding-left: 44px
+      // height: 2px
+      h2
+        font-size: 30px
+      .items-servicios
+        grid-template-columns: 1fr 1fr 1fr
+        grid-column-gap: 50px
+        .item
+          display: grid
+          grid-template-columns: 44px 1fr
+          // align-self: center
+          img
+            margin-bottom: 0
+          h4
+            padding-left: 16px
+            align-self: center
+            // font-size: 20px
+
+@media (min-width: 900px)
+  .servicios
+    padding: 100px 0 146px 0
+    // display: grid
+    // margin-left: 105px
+    // margin: auto
+    max-width: 78.5%
+    // grid-template-columns: 10px 1fr
+    h6.light-title
+      // transform: rotate(-90deg)
+      // margin-top: 84px
+      // margin-bottom: 0
+      // align-self: start
+    .contenido
+      padding-left: 54px
+      h2
+        font-size: 36px
+        line-height: 50px
+        width: 80%
+      .items-servicios
+        // grid-template-columns: 1fr 1fr 1fr
+        grid-column-gap: 20px
+        grid-row-gap: 46px
+        .item
+          // display: grid
+          grid-template-columns: 60px 1fr
+          img
+            // margin-bottom: 0
+          h4
+            // padding-left: 14px
+            // align-self: center
+
+@media (min-width: 1200px)
+  .servicios
+    padding: 110px 0 152px 0
+    // display: grid
+    margin: auto
+    max-width: 76%
+    // grid-template-columns: 10px 1fr
+    h6.light-title
+      // transform: rotate(-90deg)
+      // margin-top: 84px
+      // margin-bottom: 0
+      // align-self: start
+    .contenido
+      padding-left: 65px
+      h2
+        // font-size: 38px
+        // line-height: 50px
+        // width: 80%
+      .items-servicios
+        // width: 95%
+        // grid-template-columns: 1fr 1fr 1fr
+        grid-column-gap: 0px
+        .item
+          // display: grid
+          // grid-template-columns: 60px 1fr
+          img
+            // margin-bottom: 0
+          h4
+            // padding-left: 14px
+            // align-self: center
+
+@media (min-width: 1400px)
+  .servicios
+    padding: 130px 0 172px 0
+    // margin: auto
+    padding-left: 60px
+    padding-right: 60px
+    max-width: 80%
+    // display: grid
+    // margin-left: 180px
+    // grid-template-columns: 10px 1fr
+    h6.light-title
+      // transform: rotate(-90deg)
+      // margin-top: 84px
+      // margin-bottom: 0
+      // align-self: start
+    .contenido
+      padding-left: 76px
+      h2
+        font-size: 38px
+        line-height: 52px
+        width: 76%
+        // line-height: 55px
+        // font-size: 42px
+        margin-bottom: 74px
+      .items-servicios
+        // grid-template-columns: 1fr 1fr 1fr
+        .item
+          // display: grid
+          grid-template-columns: 64px 1fr
+          img
+            // margin-bottom: 0
+          h4
+            // padding-left: 14px
+            // align-self: center
+            // font-size: 23px
+
+@media (min-width: 1600px)
+  .servicios
+    // padding: 110px 180px 152px 0
+    // display: grid
+    // margin-left: 180px
+    // grid-template-columns: 10px 1fr
+    margin: auto
+    max-width: 77%
+    padding-left: 80px
+    padding-right: 80px
+    padding-top: 140px
+    padding-bottom: 182px
+    h6.light-title
+      // transform: rotate(-90deg)
+      // margin-top: 84px
+      // margin-bottom: 0
+      // align-self: start
+    .contenido
+      padding-left: 92px
+      h2
+        font-size: 40px
+        line-height: 56px
+        // width: 80%
+        // line-height: 55px
+        // font-size: 42px
+        // margin-bottom: 74px
+      .items-servicios
+        // grid-template-columns: 1fr 1fr 1fr
+        .item
+          // display: grid
+          grid-template-columns: 68px 1fr
+          img
+            // margin-bottom: 0
+            height: 70px
+          h4
+            padding-left: 22px
+            // align-self: center
+            font-size: 24px
+
+@media (min-width: 1900px)
+  .servicios
+    // padding: 110px 180px 152px 0
+    // display: grid
+    // margin-left: 180px
+    // grid-template-columns: 10px 1fr
+    // margin: auto
+    max-width: 72%
+    // padding-left: 80px
+    // padding-right: 80px
+    padding-top: 140px
+    padding-bottom: 182px
+    h6.light-title
+      // transform: rotate(-90deg)
+      // margin-top: 84px
+      // margin-bottom: 0
+      // align-self: start
+    .contenido
+      // padding-left: 88px
+      h2
+        font-size: 43px
+        line-height: 61px
+        // width: 80%
+        // line-height: 55px
+        // font-size: 42px
+        // margin-bottom: 74px
+      .items-servicios
+        // grid-template-columns: 1fr 1fr 1fr
+        .item
+          // display: grid
+          // grid-template-columns: 64px 1fr
+          img
+            // margin-bottom: 0
+          h4
+            // padding-left: 18px
+            align-self: center
+            font-size: 25px
+
+/* Filosofia
+.filosofia
+  background: linear-gradient(284.08deg, #090014 1.88%, #410C87 98.18%)
+  color: white
+  width: 100%
+  .data
+    padding: 62px 43px 62px 12%
+    // margin-left: 40px
+    h6
+      font-weight: 800
+      line-height: 16px
+      font-size: 11px
+      color: $light-gray
+      text-transform: uppercase
+      letter-spacing: 0.2em
+      margin-bottom: 170px
+    h3
+      font-weight: 600
+      line-height: 34px
+      font-size: 25px
+  .img
+
+@media (min-width: 768px)
+  .filosofia
+    padding: 0
+    width: 100%
+    display: grid
+    grid-template-columns: 1fr 0.8fr
+    position: relative
+    .data
+      padding: 62px 60px 62px 17%
+      h6
+      h3
+        font-size: 22px
+        line-height: 30px
+    .img
+      height: 100%
+      border-radius: 4px 0 0 4px
+      background: black
+      background-image: url('../img/filosofia.jpg')
+      background-position: center
+      background-size: cover
+      position: relative
+      top: -40px
+
+@media (min-width: 900px)
+  .filosofia
+    // padding: 0
+    // width: 100%
+    // display: grid
+    // grid-template-columns: 1fr 0.8fr
+    // position: relative
+    .data
+      padding: 66px 60px 66px 19%
+      h6
+      h3
+        font-size: 24px
+        line-height: 34px
+        width: 80%
+    .img
+      // height: 100%
+      // border-radius: 4px 0 0 4px
+      // background: red
+      // position: relative
+      // top: -40px
+
+@media (min-width: 1200px)
+  .filosofia
+    // padding: 0
+    // width: 100%
+    // display: grid
+    // grid-template-columns: 1fr 0.8fr
+    // position: relative
+    .data
+      padding: 66px 60px 66px 22.5%
+      h6
+      h3
+        font-size: 24px
+        line-height: 34px
+        // width: 80%
+    .img
+      // height: 100%
+      // border-radius: 4px 0 0 4px
+      // background: red
+      // position: relative
+      // top: -40px
+
+@media (min-width: 1400px)
+  .filosofia
+    margin: auto
+    .data
+      padding: 80px 60px 72px 26%
+      h6
+        // line-height: 19px
+        // font-size: 13px
+        // letter-spacing: 0.2em
+        font-size: 12px
+        // letter-spacing: 0.3em
+        margin-bottom: 190px
+      h3
+        // width: 100%
+        // max-width: 350px
+        // line-height: 40px
+        // font-size: 29px
+        line-height: 36px
+        font-size: 26px
+    .img
+
+@media (min-width: 1600px)
+  .filosofia
+    // margin: auto
+    // max-width: 80%
+    .data
+      padding: 82px 60px 76px 29%
+      h6
+        // line-height: 19px
+        font-size: 13px
+        // letter-spacing: 0.2em
+        margin-bottom: 200px
+      h3
+        // width: 100%
+        // max-width: 350px
+        font-size: 28px
+        line-height: 38px
+    .img
+
+@media (min-width: 1900px)
+  .filosofia
+    margin: auto
+    // max-width: 72%
+    .data
+      padding: 88px 120px 80px 32.5%
+      h6
+        // line-height: 19px
+        // font-size: 13px
+        // letter-spacing: 0.2em
+        font-size: 14px
+        letter-spacing: 0.25em
+      h3
+        // width: 100%
+        // max-width: 350px
+        // line-height: 40px
+        // font-size: 29px
+        line-height: 40px
+        font-size: 29px
+    .img
+
+/* Productos
+.productos
+  padding: 76px 0 30px 0
+  margin: auto
+  max-width: 78%
+  .light-title
+    font-weight: 800
+    line-height: 16px
+    font-size: 11px
+    letter-spacing: 0.4em
+    text-transform: uppercase
+    color: $gray
+    margin-bottom: 22px
+  .contenido
+    h2
+      width: 94%
+      color: $purple
+      font-weight: bold
+      line-height: normal
+      font-size: 28px
+    .items-productos
+      margin-top: 56px
+      .item
+        margin-bottom: 49px
+        .img
+          border-radius: 4px
+          width: 100%
+          height: 185px
+          margin-bottom: 27px
+          background: linear-gradient(92.81deg, #070A58 1.17%, #083A77 96.68%)
+          transition: all ease 0.3s
+          background-position: center
+          background-repeat: no-repeat
+          background-size: cover
+          &:hover, &:focus
+            transform: translate(0, -4px)
+        .data
+          margin-left: 4px
+          h6
+            font-weight: 800
+            text-transform: uppercase
+            font-size: 11px
+            color: $gray
+            letter-spacing: 0.2em
+            margin-bottom: 15px
+          h4
+            font-size: 24px
+            line-height: 30px
+            font-weight: bold
+            width: 70%
+            margin-bottom: 14px
+          p
+            font-size: 15px
+            line-height: 21px
+
+@media (min-width: 768px)
+  .productos
+    padding: 90px 0 90px 0
+    display: grid
+    max-width: 81%
+    grid-template-columns: 10px 1fr
+    .light-title
+      transform: rotate(-90deg) translate(11px, -143px)
+      width: 300px
+      margin-top: 84px
+      margin-bottom: 0
+      align-self: start
+    .contenido
+      padding-left: 44px
+      h2
+        font-size: 30px
+        width: 90%
+      .items-productos
+        .item
+          display: grid
+          // grid-template-columns: 1fr 0.45fr
+          grid-template-columns: 1fr 0.8fr
+          grid-column-gap: 30px
+          align-items: center
+          margin-bottom: 36px
+          &:last-child
+            margin-bottom: 0
+          .img
+            height: 250px
+            margin-bottom: 0
+            img
+          .data
+            h6
+            h4
+              font-size: 24px
+              width: 80%
+              line-height: 30px
+
+@media (min-width: 900px)
+  .productos
+    max-width: 78.5%
+    // grid-template-columns: 10px 1fr
+    .light-title
+      // transform: rotate(-90deg) translate(11px, -143px)
+      // width: 300px
+      // margin-top: 84px
+      // margin-bottom: 0
+      // align-self: start
+    .contenido
+      padding-left: 54px
+      h2
+        // font-size: 34px
+        font-size: 36px
+        line-height: 50px
+        width: 70%
+      .items-productos
+        width: 90%
+        .item
+          // display: grid
+          // grid-template-columns: 1fr 0.45fr
+          grid-column-gap: 36px
+          // align-items: center
+          // margin-bottom: 28px
+          &:last-child
+            // margin-bottom: 0
+          .img
+            height: 330px
+            // margin-bottom: 0
+            img
+          .data
+            h6
+            h4
+              font-size: 28px
+              // width: 80%
+              line-height: 34px
+
+@media (min-width: 1200px)
+  .productos
+    // padding: 110px 23px 110px 0
+    // margin-left: 180px
+    margin: auto
+    max-width: 76%
+    .light-title
+    .contenido
+      padding-left: 65px
+      h2
+        // font-size: 38px
+        // line-height: 50px
+        // width: 70%
+      .items-productos
+        width: 88%
+        .item
+          // display: grid
+          grid-template-columns: 1fr 0.45fr
+          grid-column-gap: 40px
+          // align-items: center
+          margin-bottom: 48px
+          &:last-child
+            // margin-bottom: 0
+          .img
+            height: 350px
+            // margin-bottom: 0
+            img
+          .data
+            h6
+            h4
+              // font-size: 28px
+              margin-bottom: 15px
+              // line-height: 34px
+
+@media (min-width: 1400px)
+  .productos
+    // padding: 110px 23px 110px 0
+    // margin-left: 180px
+    // margin: auto
+    max-width: 80%
+    padding-left: 60px
+    padding-right: 60px
+    .light-title
+    .contenido
+      padding-left: 76px
+      h2
+        // font-size: 38px
+        // line-height: 50px
+        font-size: 38px
+        line-height: 52px
+        width: 100%
+        // line-height: 55px
+        // font-size: 42px
+        max-width: 670px
+        margin-bottom: 62px
+      .items-productos
+        // width: 88%
+        .item
+          // display: grid
+          grid-template-columns: 1fr 0.45fr
+          // grid-column-gap: 40px
+          // align-items: center
+          // margin-bottom: 34px
+          &:last-child
+            // margin-bottom: 0
+          .img
+            // height: 350px
+            // margin-bottom: 0
+            img
+          .data
+            h6
+              // font-size: 12px
+              // letter-spacing: 0.2em
+            h4
+              // font-size: 32px
+              // line-height: 38px
+
+@media (min-width: 1600px)
+  .productos
+    // margin: auto
+    max-width: 77%
+    padding-left: 80px
+    padding-right: 80px
+    padding-top: 116px
+    .light-title
+    .contenido
+      // padding-left: 88px
+      padding-left: 92px
+      h2
+        // width: 100%
+        // line-height: 55px
+        font-size: 40px
+        line-height: 56px
+        // max-width: 670px
+        // margin-bottom: 70px
+      .items-productos
+        .item
+          // grid-template-columns: 1fr 0.45fr
+          &:last-child
+          .img
+            img
+          .data
+            h6
+              // font-size: 12px
+              // letter-spacing: 0.2em
+            h4
+              // font-size: 32px
+              // line-height: 38px
+
+@media (min-width: 1900px)
+  .productos
+    // margin: auto
+    max-width: 72%
+    // padding-left: 80px
+    // padding-right: 80px
+    padding-top: 130px
+    padding-bottom: 122px
+    .light-title
+    .contenido
+      // padding-left: 88px
+      h2
+        // width: 100%
+        // line-height: 55px
+        // font-size: 42px
+        // max-width: 670px
+        // margin-bottom: 70px
+        font-size: 43px
+        line-height: 61px
+        margin-bottom: 72px
+      .items-productos
+        .item
+          // grid-template-columns: 1fr 0.45fr
+          &:last-child
+          .img
+            height: 410px
+            img
+          .data
+            h6
+              // font-size: 12px
+              // letter-spacing: 0.2em
+            h4
+              font-size: 32px
+              line-height: 38px
+
+/* Footer
+.site-footer-wrapper
+  background: linear-gradient(275.17deg, #090014 1.88%, #410C87 98.18%)
+  .site-footer
+    // background: linear-gradient(275.17deg, #090014 1.88%, #410C87 98.18%)
+    padding: 62px 0 62px 0
+    box-sizing: border-box
+    width: 100%
+    margin: auto
+    max-width: 87%
+    .contacto
+      color: white
+      .texto
+        margin-bottom: 65px
+        display: flex
+        flex-wrap: wrap
+        align-content: space-between
+        h6
+          font-weight: 800
+          font-size: 12px
+          letter-spacing: 0.3em
+          margin-bottom: 190px
+          color: $light-gray
+          text-transform: uppercase
+          margin-bottom: 130px
+          width: 100%
+        h3
+          width: 90%
+          align-self: end
+          font-weight: 600
+          line-height: 34px
+          font-size: 25px
+          a
+            color: $green
+            text-decoration: none
+      .formulario
+        padding-bottom: 52px
+        form
+          input, textarea
+            border: 0.75px solid rgba(255, 255, 255, 0.7)
+            transition: all ease 0.3s
+            border-radius: 2px
+            color: white
+            background: transparent
+            // background: $gray
+            &:focus
+              border: 0.75px solid #99E600
+              outline: none
+          input
+            // border: 0.75px solid rgba(255, 255, 255, 0.5)
+            box-sizing: border-box
+            // background: transparent
+            width: 100%
+            padding: 12px 13px
+            font-size: 16px
+            margin-bottom: 17px
+            // border-radius: 3px
+          textarea
+            // border: 0.75px solid rgba(255, 255, 255, 0.5)
+            box-sizing: border-box
+            font-family: 'Encode Sans Semi Condensed', sans-serif
+            // background: transparent
+            width: 100%
+            padding: 12px 13px
+            font-size: 16px
+            margin-bottom: 17px
+            // border-radius: 3px
+          button
+            width: 100%
+            background: white
+            font-weight: 600
+            line-height: 17px
+            font-size: 12px
+            outline: none
+            box-shadow: none
+            border: none
+            text-transform: uppercase
+            color: $purple
+            text-align: center
+            letter-spacing: 0.1em
+            border-radius: 3px
+            padding: 12px 0
+            cursor: pointer
+            transition: all ease 0.3s
+            &:hover, &:focus
+              background: $green
+    .disclaimer
+      display: grid
+      border-top: solid 1px #463C53
+      text-align: center
+      padding: 42px 0 6px
+      .brand
+        order: 1
+        img
+          width: 120px
+          height: auto
+          margin-bottom: 36px
+      .copy
+        order: 3
+        p
+          color: $light-gray
+      .rrss
+        order: 2
+        margin-bottom: 40px
+        a
+          opacity: 1
+          transition: all ease 0.3s
+          &:hover
+            opacity: 0.7
+          img
+            width: 22px
+            margin-left: 15px
+            margin-right: 15px
+
+@media (min-width: 768px)
+  .site-footer-wrapper
+    .site-footer
+      // margin: auto
+      max-width: 89%
+      padding: 0
+      .contacto
+        padding: 62px 0 62px
+        display: grid
+        grid-template-columns: 1fr 0.9fr
+        .texto
+          padding-right: 40px
+          margin-bottom: 0
+          h6
+            margin-bottom: 0
+          h3
+            font-size: 22px
+            line-height: 30px
+        .formulario
+          padding-bottom: 0
+          form
+            input
+            textarea
+              height: 140px
+            button
+      .disclaimer
+        padding: 42px 0 42px
+        grid-template-columns: 1fr 1.5fr 1fr
+        justify-content: space-between
+        text-align: inherit
+        align-items: center
+        .brand
+          order: 1
+          img
+            width: 112px
+            margin-bottom: 0
+        .copy
+          order: 2
+          text-align: center
+          p
+            font-size: 13px
+        .rrss
+          order: 3
+          margin-bottom: 0
+          text-align: right
+          a
+            img
+              width: 21px
+              margin-left: 19px
+              margin-right: 0
+
+@media (min-width: 900px)
+  .site-footer-wrapper
+    .site-footer
+      // padding: 0
+      // margin: auto
+      max-width: 90%
+      // padding: 0
+      .contacto
+        padding: 62px 0 62px
+        // display: grid
+        grid-template-columns: 1fr 0.8fr
+        .texto
+          // padding-right: 40px
+          // margin-bottom: 0
+          h6
+          h3
+            font-size: 24px
+            line-height: 34px
+        .formulario
+          // padding-bottom: 0
+          form
+            input
+            textarea
+            button
+      .disclaimer
+        padding: 42px 0 42px
+        // grid-template-columns: 1fr 1fr 1fr
+        // justify-content: space-between
+        // text-align: inherit
+        // align-items: center
+        .brand
+          // order: 1
+          img
+            width: 110px
+            // margin-bottom: 0
+        .copy
+          // order: 2
+          // text-align: center
+          p
+            font-size: 12px
+        .rrss
+          // order: 3
+          // margin-bottom: 0
+          // text-align: right
+          a
+            img
+              // width: 40px
+              width: 19px
+              margin-left: 22px
+
+@media (min-width: 1200px)
+  .site-footer-wrapper
+    .site-footer
+      max-width: 87%
+      padding: 0
+      .contacto
+        padding: 68px 0 60px
+        // display: grid
+        // grid-template-columns: 1fr 0.8fr
+        .texto
+          // padding-right: 40px
+          // margin-bottom: 0
+          h6
+          h3
+            width: 70%
+            font-size: 24px
+            line-height: 34px
+        .formulario
+          // padding-bottom: 0
+          form
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            input
+              width: 100%
+              &:nth-child(-n+2)
+                width: 49%
+            textarea
+              width: 100%
+            button
+              width: 100%
+      .disclaimer
+        padding: 42px 0
+        // grid-template-columns: 1fr 1fr 1fr
+        // justify-content: space-between
+        // text-align: inherit
+        // align-items: center
+        .brand
+          // order: 1
+          img
+            // width: 100px
+            // margin-bottom: 0
+        .copy
+          // order: 2
+          // text-align: center
+          p
+            font-size: 13px
+        .rrss
+          // order: 3
+          // margin-bottom: 0
+          // text-align: right
+          a
+            img
+              // width: 40px
+
+@media (min-width: 1400px)
+  .site-footer-wrapper
+    .site-footer
+      max-width: 86%
+      padding: 0 60px
+      .contacto
+        padding: 82px 0 70px
+        .texto
+          h6
+          h3
+            max-width: 360px
+            line-height: 36px
+            font-size: 26px
+        .formulario
+      .disclaimer
+        padding: 42px 0 50px
+        .brand
+          img
+            width: 120px
+        .copy
+          p
+        .rrss
+          a
+            img
+
+@media (min-width: 1600px)
+  .site-footer-wrapper
+    .site-footer
+      width: 100%
+      padding: 0
+      max-width: 83%
+      // padding: 0 80px
+      .contacto
+        padding: 96px 0 74px
+        .texto
+          h6
+            font-size: 13px
+          h3
+            width: 56%
+            font-size: 28px
+            line-height: 38px
+        .formulario
+          form
+            input
+            textarea
+            button
+      .disclaimer
+        padding: 46px 0 42px 0
+        .brand
+          img
+        .copy
+          p
+            font-size: 14px
+        .rrss
+          a
+            img
+              width: 23px
+
+@media (min-width: 1900px)
+  .site-footer-wrapper
+    .site-footer
+      max-width: 76%
+      .contacto
+        padding: 100px 0 86px
+        .texto
+          h6
+          h3
+        .formulario
+          form
+            input
+            textarea
+            button
+      .disclaimer
+        .brand
+          img
+            width: 130px
+        .copy
+          p
+        .rrss
+          a
+            img
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
