@@ -1397,14 +1397,16 @@ body {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between; }
-        .site-footer-wrapper .site-footer .contacto .formulario form input {
+        .site-footer-wrapper .site-footer .contacto .formulario form div.field {
           width: 100%; }
-          .site-footer-wrapper .site-footer .contacto .formulario form input:nth-child(-n+2) {
+          .site-footer-wrapper .site-footer .contacto .formulario form div.field:nth-child(-n+2) {
             width: 49%; }
-        .site-footer-wrapper .site-footer .contacto .formulario form textarea {
-          width: 100%; }
-        .site-footer-wrapper .site-footer .contacto .formulario form button {
-          width: 100%; }
+          .site-footer-wrapper .site-footer .contacto .formulario form div.field input {
+            width: 100%; }
+          .site-footer-wrapper .site-footer .contacto .formulario form div.field textarea {
+            width: 100%; }
+          .site-footer-wrapper .site-footer .contacto .formulario form div.field button {
+            width: 100%; }
     .site-footer-wrapper .site-footer .disclaimer {
       padding: 42px 0; }
       .site-footer-wrapper .site-footer .disclaimer .copy p {

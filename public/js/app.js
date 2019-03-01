@@ -150,66 +150,94 @@ $(document).ready(function(){
     once: true
   });
 
+  // Validacion de Campos
+  // var field_nombre = $(".input-nombre").val();
+  // var field_correo = $(".input-correo").val();
+  // var field_asunto = $(".input-tema").val();
+  // var field_mensaje = $(".text-mensaje").val();
+
+  // $('.validar-nombre').toggleClass('d-none');
+  var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+  var correo = $(".input-correo").val();
+
+  $('.input-nombre').focusout(function(){
+    if($('.input-nombre').val() == "") {
+      $('.validar-nombre').removeClass('d-none');
+    } else if ($('.input-nombre').val() != "") {
+      $('.validar-nombre').addClass('d-none');
+    }
+  });
+  $('.input-correo').focusout(function(){
+    if($('.input-correo').val() == "" || !testEmail.test($('.input-correo').val())) {
+      $('.validar-correo').removeClass('d-none');
+    } else if ($('.input-correo').val() != "") {
+      $('.validar-correo').addClass('d-none');
+    }
+  });
+  $('.input-tema').focusout(function(){
+    if($('.input-tema').val() == "") {
+      $('.validar-asunto').removeClass('d-none');
+    } else if ($('.input-tema').val() != "") {
+      $('.validar-asunto').addClass('d-none');
+    }
+  });
+  $('.text-mensaje').focusout(function(){
+    if($('.text-mensaje').val() == "") {
+      $('.validar-mensaje').removeClass('d-none');
+    } else if ($('.text-mensaje').val() != "") {
+      $('.validar-mensaje').addClass('d-none');
+    }
+  });
 
 
+  // Validacion de Envio
   $.ajaxSetup({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
   });
 
-  // Form Validation
-  /* Create new Post */
   $("#enviarContacto").click(function(e) {
       var form_action = $('#formulario').attr('action');
       var nombre = $(".input-nombre").val();
       var correo = $(".input-correo").val();
       var asunto = $(".input-tema").val();
       var mensaje = $(".text-mensaje").val();
+      var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
 
-      $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
+      if (nombre.length > 0 && correo.length > 0 && testEmail.test(correo) && asunto.length > 0 && mensaje.length > 0){
 
-      $.post( form_action, { name: nombre, email: correo, subject: asunto, message: mensaje })
-        .done(function(data) {
-          // console.log('success');
-          if (data['errors']) {
-            $('.mensaje-formulario .mensaje-cargando').addClass('d-none');
-            $.each(data['errors'], function( index, value ) {
-             // alert( index + ": " + value );
-            });
-          } else {
-            $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
-            if (data['success']) {
+        $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
+
+        $.post( form_action, { name: nombre, email: correo, subject: asunto, message: mensaje } )
+          .done(function(data) {
+
+            if (data['errors']) {
+
+              $.each(data['errors'], function( index, value ){});
+
+            } else {
+
               $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
               $('.mensaje-formulario .mensaje-enviado').toggleClass('d-none')
               .delay(4000).queue(function(){
                 $('.mensaje-formulario .mensaje-enviado').toggleClass('d-none').dequeue();
               });
+
             }
-            // $('#enviarContacto').attr('disabled','disabled');
-            // $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
-            // $('.mensaje-formulario .mensaje-enviado').toggleClass('d-none')
-            // .delay(4000).queue(function(){
-            //   $('.mensaje-formulario .mensaje-enviado').toggleClass('d-none').dequeue();
-            // });
           }
-        }
-      ).fail(function(data){
+        ).fail(function(data){
 
-          // $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
-          $('.mensaje-formulario .mensaje-error').toggleClass('d-none');
+            $('.mensaje-formulario .mensaje-error').toggleClass('d-none');
 
-      });
+        });
+
+      } else {
+
+        // $('.validar-nombre').toggleClass('d-none');
+
+      }
+
   });
-
-
-
-
-
-
-
-
-
-
 
 });
