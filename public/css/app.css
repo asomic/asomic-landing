@@ -1196,7 +1196,7 @@ body {
             text-decoration: none; }
       .site-footer-wrapper .site-footer .contacto .formulario {
         padding-bottom: 52px; }
-        .site-footer-wrapper .site-footer .contacto .formulario form input, .site-footer-wrapper .site-footer .contacto .formulario form textarea {
+        .site-footer-wrapper .site-footer .contacto .formulario form div.field input, .site-footer-wrapper .site-footer .contacto .formulario form div.field textarea {
           border: 0.75px solid rgba(255, 255, 255, 0.9);
           -webkit-transition: all ease 0.3s;
           -o-transition: all ease 0.3s;
@@ -1204,25 +1204,25 @@ body {
           border-radius: 2px;
           color: white;
           background: transparent; }
-          .site-footer-wrapper .site-footer .contacto .formulario form input::-webkit-input-placeholder, .site-footer-wrapper .site-footer .contacto .formulario form textarea::-webkit-input-placeholder {
+          .site-footer-wrapper .site-footer .contacto .formulario form div.field input::-webkit-input-placeholder, .site-footer-wrapper .site-footer .contacto .formulario form div.field textarea::-webkit-input-placeholder {
             color: rgba(255, 255, 255, 0.6); }
-          .site-footer-wrapper .site-footer .contacto .formulario form input:-ms-input-placeholder, .site-footer-wrapper .site-footer .contacto .formulario form textarea:-ms-input-placeholder {
+          .site-footer-wrapper .site-footer .contacto .formulario form div.field input:-ms-input-placeholder, .site-footer-wrapper .site-footer .contacto .formulario form div.field textarea:-ms-input-placeholder {
             color: rgba(255, 255, 255, 0.6); }
-          .site-footer-wrapper .site-footer .contacto .formulario form input::-ms-input-placeholder, .site-footer-wrapper .site-footer .contacto .formulario form textarea::-ms-input-placeholder {
+          .site-footer-wrapper .site-footer .contacto .formulario form div.field input::-ms-input-placeholder, .site-footer-wrapper .site-footer .contacto .formulario form div.field textarea::-ms-input-placeholder {
             color: rgba(255, 255, 255, 0.6); }
-          .site-footer-wrapper .site-footer .contacto .formulario form input::placeholder, .site-footer-wrapper .site-footer .contacto .formulario form textarea::placeholder {
+          .site-footer-wrapper .site-footer .contacto .formulario form div.field input::placeholder, .site-footer-wrapper .site-footer .contacto .formulario form div.field textarea::placeholder {
             color: rgba(255, 255, 255, 0.6); }
-          .site-footer-wrapper .site-footer .contacto .formulario form input:focus, .site-footer-wrapper .site-footer .contacto .formulario form textarea:focus {
+          .site-footer-wrapper .site-footer .contacto .formulario form div.field input:focus, .site-footer-wrapper .site-footer .contacto .formulario form div.field textarea:focus {
             border: 0.75px solid #99E600;
             outline: none; }
-        .site-footer-wrapper .site-footer .contacto .formulario form input {
+        .site-footer-wrapper .site-footer .contacto .formulario form div.field input {
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
           width: 100%;
           padding: 12px 13px;
           font-size: 16px;
           margin-bottom: 17px; }
-        .site-footer-wrapper .site-footer .contacto .formulario form textarea {
+        .site-footer-wrapper .site-footer .contacto .formulario form div.field textarea {
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
           font-family: 'Encode Sans Semi Condensed', sans-serif;
@@ -1230,6 +1230,10 @@ body {
           padding: 12px 13px;
           font-size: 16px;
           margin-bottom: 17px; }
+        .site-footer-wrapper .site-footer .contacto .formulario form div.field span p {
+          margin: 4px 0 20px;
+          font-size: 14px;
+          color: white; }
         .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario {
           font-size: 15px; }
           .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-cargando, .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-enviado, .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-error {
@@ -1320,7 +1324,7 @@ body {
           line-height: 30px; }
       .site-footer-wrapper .site-footer .contacto .formulario {
         padding-bottom: 0; }
-        .site-footer-wrapper .site-footer .contacto .formulario form textarea {
+        .site-footer-wrapper .site-footer .contacto .formulario form div.field textarea {
           height: 140px; }
     .site-footer-wrapper .site-footer .disclaimer {
       padding: 42px 0 42px;

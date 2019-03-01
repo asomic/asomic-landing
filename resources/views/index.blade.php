@@ -182,23 +182,23 @@
 
               <div class="field field-nombre">
                 <input type="text" class="input-nombre" placeholder="Tu Nombre" name="name" required>
-                <span class="validar-nombre d-none">Ingrese un nombre válido</span>
+                <span class="validar-nombre d-none"><p>Ingrese un nombre válido</p></span>
               </div>
               <div class="field field-correo">
                 <input type="email" class="input-correo" placeholder="Tu Correo" name="email" required>
-                <span class="validar-correo d-none">Ingrese un correo válido</span>
+                <span class="validar-correo d-none"><p>Ingrese un correo válido</p></span>
               </div>
               <div class="field field-asunto">
                 <input type="text" class="input-tema" placeholder="¿En qué te podemos ayudar?" name="tema" required>
-                <span class="validar-asunto d-none">Ingrese un motivo para tu mensaje</span>
+                <span class="validar-asunto d-none"><p>Ingrese un motivo para tu mensaje</p></span>
               </div>
               <div class="field field-mensaje">
                 <textarea rows="8" cols="80" class="text-mensaje" placeholder="Cuéntanos sobre tu proyecto" name="message" required></textarea>
-                <span class="validar-mensaje d-none">Ingrese un mensaje</span>
+                <span class="validar-mensaje d-none"><p>Ingrese un mensaje</p></span>
               </div>
 
               <div class="mensaje-formulario">
-                <div class="mensaje-error d-none fadeIn"><p>Error</p></div>
+                <div class="mensaje-error d-none fadeIn"><p>En este momento no podemos enviar tu mensaje. Por favor, contácta a través de contacto@asomic.com o en nuestras redes sociales.</p></div>
                 <div class="mensaje-cargando d-none fadeIn">
                   <div class="lds-ripple"><div></div><p>Enviando su mensaje</p></div>
                 </div>

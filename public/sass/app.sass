@@ -1420,31 +1420,38 @@ body
       .formulario
         padding-bottom: 52px
         form
-          input, textarea
-            border: 0.75px solid rgba(255, 255, 255, 0.9)
-            transition: all ease 0.3s
-            border-radius: 2px
-            color: white
-            background: transparent
-            // background: $gray
-            &::placeholder
-              color: rgba(white, 0.6)
-            &:focus
-              border: 0.75px solid #99E600
-              outline: none
-          input
-            box-sizing: border-box
-            width: 100%
-            padding: 12px 13px
-            font-size: 16px
-            margin-bottom: 17px
-          textarea
-            box-sizing: border-box
-            font-family: 'Encode Sans Semi Condensed', sans-serif
-            width: 100%
-            padding: 12px 13px
-            font-size: 16px
-            margin-bottom: 17px
+          div.field
+            input, textarea
+              border: 0.75px solid rgba(255, 255, 255, 0.9)
+              transition: all ease 0.3s
+              border-radius: 2px
+              color: white
+              background: transparent
+              // background: $gray
+              &::placeholder
+                color: rgba(white, 0.6)
+              &:focus
+                border: 0.75px solid #99E600
+                outline: none
+            input
+              box-sizing: border-box
+              width: 100%
+              padding: 12px 13px
+              font-size: 16px
+              margin-bottom: 17px
+            textarea
+              box-sizing: border-box
+              font-family: 'Encode Sans Semi Condensed', sans-serif
+              width: 100%
+              padding: 12px 13px
+              font-size: 16px
+              margin-bottom: 17px
+            span
+              // display: block
+              p
+                margin: 4px 0 20px
+                font-size: 14px
+                color: white
           .mensaje-formulario
             font-size: 15px
             .mensaje-cargando, .mensaje-enviado, .mensaje-error
@@ -1526,10 +1533,11 @@ body
         .formulario
           padding-bottom: 0
           form
-            input
-            textarea
-              height: 140px
-            button
+            div.field
+              input
+              textarea
+                height: 140px
+              button
       .disclaimer
         padding: 42px 0 42px
         grid-template-columns: 1fr 1.5fr 1fr
@@ -1577,9 +1585,10 @@ body
         .formulario
           // padding-bottom: 0
           form
-            input
-            textarea
-            button
+            div.field
+              input
+              textarea
+              button
       .disclaimer
         padding: 42px 0 42px
         // grid-template-columns: 1fr 1fr 1fr
