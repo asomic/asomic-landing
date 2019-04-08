@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/politica-privacidad-ps', function () {
+    return view('pp-purasangre');
+});
+
 Route::post('/enviado', 'MailController@sendmail')->name('ruta');
