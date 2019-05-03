@@ -228,6 +228,7 @@ $(document).ready(function(){
           }
         ).fail(function(data){
 
+            $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none')
             $('.mensaje-formulario .mensaje-error').toggleClass('d-none');
 
         });
