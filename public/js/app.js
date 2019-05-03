@@ -218,6 +218,7 @@ $(document).ready(function(){
 
             } else {
 
+              console.log("Se envió!");
               $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
               $('.mensaje-formulario .mensaje-enviado').toggleClass('d-none')
               .delay(4000).queue(function(){
@@ -228,7 +229,7 @@ $(document).ready(function(){
           }
         ).fail(function(data){
 
-            $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
+            console.log("No se envió!");
             $('.mensaje-formulario .mensaje-error').toggleClass('d-none');
 
         });
