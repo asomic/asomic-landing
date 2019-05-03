@@ -224,6 +224,7 @@ $(document).ready(function(){
               .delay(4000).queue(function(){
                 $('.mensaje-formulario .mensaje-enviado').toggleClass('d-none').dequeue();
               });
+              
 
             }
           }
