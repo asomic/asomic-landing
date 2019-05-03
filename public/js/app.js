@@ -231,6 +231,7 @@ $(document).ready(function(){
         ).fail(function(data){
 
             console.log("No se envió!");
+            $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
             $('.mensaje-formulario .mensaje-error').toggleClass('d-none');
 
         });
