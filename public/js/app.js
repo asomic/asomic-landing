@@ -229,7 +229,7 @@ $(document).ready(function(){
             }
           }
         ).fail(function(data){
-            console.log('fail: '+JSON.parse(data));
+            console.log('fail: '+JSON.stringify(data));
 
             $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
             $('.mensaje-formulario .mensaje-error').toggleClass('d-none');
