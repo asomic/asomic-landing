@@ -1235,7 +1235,8 @@ body {
           font-size: 14px;
           color: white; }
         .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario {
-          font-size: 15px; }
+          font-size: 15px;
+          line-height: 1.6em; }
           .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-cargando, .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-enviado, .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-error {
             padding: 14px 0 32px 4px; }
             .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-cargando p, .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-enviado p, .site-footer-wrapper .site-footer .contacto .formulario form .mensaje-formulario .mensaje-error p {
