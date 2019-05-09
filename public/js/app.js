@@ -230,7 +230,7 @@ $(document).ready(function(){
           }
         ).fail(function(data){
 
-            console.log(data);
+            console.log(data.responseJSON);
             $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
             $('.mensaje-formulario .mensaje-error').toggleClass('d-none');
 
