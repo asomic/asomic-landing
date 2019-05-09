@@ -211,14 +211,14 @@ $(document).ready(function(){
 
         $.post( form_action, { name: nombre, email: correo, subject: asunto, message: mensaje } )
           .done(function(data) {
-
+            console.log(data);
             if (data['errors']) {
 
               $.each(data['errors'], function( index, value ){});
 
             } else {
 
-              console.log("Se envió!");
+
               $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
               $('.mensaje-formulario .mensaje-enviado').toggleClass('d-none')
               .delay(4000).queue(function(){
@@ -229,8 +229,8 @@ $(document).ready(function(){
             }
           }
         ).fail(function(data){
+            console.log('fail: '+data);
 
-            console.log(data.responseJSON);
             $('.mensaje-formulario .mensaje-cargando').toggleClass('d-none');
             $('.mensaje-formulario .mensaje-error').toggleClass('d-none');
 

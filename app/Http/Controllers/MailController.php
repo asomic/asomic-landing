@@ -14,7 +14,7 @@ class MailController extends Controller
 {
     public function sendmail(Request $request)
     {
-      return response()->json(['warningcito']);
+      return response('wiiii',200);
 
       // $validator = \Validator::make($request->all(), [
       //   'name' => 'required',
