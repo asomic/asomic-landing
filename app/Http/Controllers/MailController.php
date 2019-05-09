@@ -41,14 +41,14 @@ class MailController extends Controller
 
       //   //dd('algo paso');
         // Session::flash('error','error.');
-        return response()->json(['warningcito']);
-
+      //  return response()->json(['warningcito']);
+      return response('fallo',500);
       }
       else {
       //
         // Session::flash('success','Su mensaje a sido recibido satisfactoriamente y pronto nos contactaremos con usted.');
-        return response()->json(['success']);
-
+        //return response()->json(['success']);
+        return response('logro',200);
       }
 
 
