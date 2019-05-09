@@ -16,17 +16,17 @@ class MailController extends Controller
     {
 
 
-      $validator = \Validator::make($request->all(), [
-        'name' => 'required',
-        'email' => 'required|email',
-        'subject' => 'required',
-        'message' => 'required|max:700'
-       ]);
-
-       if ($validator->fails())
-       {
-           return response()->json(['errors' => $validator->errors()->all()]);
-       }
+      // $validator = \Validator::make($request->all(), [
+      //   'name' => 'required',
+      //   'email' => 'required|email',
+      //   'subject' => 'required',
+      //   'message' => 'required|max:700'
+      //  ]);
+      //
+      //  if ($validator->fails())
+      //  {
+      //      return response()->json(['errors' => $validator->errors()->all()]);
+      //  }
 
       // Validator::make($request->all(), [
       //  'name' => 'required',
