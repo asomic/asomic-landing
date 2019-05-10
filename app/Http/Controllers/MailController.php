@@ -35,7 +35,7 @@ class MailController extends Controller
       //  'message' => 'required|max:700'
       // ])->validate();
 
-      Mail::to("juan.berrios@asomic.com")->send(new ContactMail($request->input()));
+      Mail::to("contacto@asomic.com")->send(new ContactMail($request->input()));
 
       if (Mail::failures()) {
 
