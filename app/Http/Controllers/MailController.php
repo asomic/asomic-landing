@@ -42,6 +42,10 @@ class MailController extends Controller
       //   //dd('algo paso');
         // Session::flash('error','error.');
       //  return response()->json(['warningcito']);
+      // Log::error('')
+      if (\Exception $e) {
+        Log::error($e);
+      }
       return response('fallo',500);
       }
       else {

@@ -20,3 +20,7 @@ Route::get('/politica-privacidad-ps', function () {
 });
 
 Route::post('/enviado', 'MailController@sendmail')->name('ruta');
+
+// Route::get('/prueba', function(){
+//   Log::error('este es un error');
+// });
