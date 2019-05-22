@@ -140,7 +140,7 @@
       <section class="filosofia" id="filosofia">
         <div class="data" data-aos="fade-left" data-aos-duration="1000">
           <h6>Nuestra Filosofía</h6>
-          <h3><span class="color-green">Calidad antes que cantidad</span>.<br> Servicio personalizados para cada necesidad.</h3>
+          <h3><span class="color-green">Calidad antes que cantidad</span>.<br> Ofrecemos servicios personalizados para cada necesidad.</h3>
         </div>
         <div class="img" data-aos="fade-right" data-aos-duration="1000"></div>
       </section>
