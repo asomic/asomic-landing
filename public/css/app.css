@@ -590,10 +590,7 @@ body {
   .presentacion .intro-message {
     max-width: 71.5%;
     padding-top: 160px;
-    padding-bottom: 170px; }
-    .presentacion .intro-message h1 {
-      font-size: 46px;
-      line-height: 62px; } }
+    padding-bottom: 170px; } }
 
 /* Contenido */
 .quienes-somos-wrapper .quienes-somos {
@@ -863,9 +860,6 @@ body {
     max-width: 72%;
     padding-top: 140px;
     padding-bottom: 182px; }
-    .servicios .contenido h2 {
-      font-size: 43px;
-      line-height: 61px; }
     .servicios .contenido .items-servicios .item h4 {
       -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -1141,10 +1135,6 @@ body {
     max-width: 72%;
     padding-top: 130px;
     padding-bottom: 122px; }
-    .productos .contenido h2 {
-      font-size: 43px;
-      line-height: 61px;
-      margin-bottom: 72px; }
     .productos .contenido .items-productos .item .img {
       height: 410px; }
     .productos .contenido .items-productos .item .data h4 {
@@ -1271,7 +1261,7 @@ body {
     .site-footer-wrapper .site-footer .disclaimer {
       display: -ms-grid;
       display: grid;
-      border-top: solid 1px #463C53;
+      border-top: solid 1px rgba(255, 255, 255, 0.1);
       text-align: center;
       padding: 42px 0 6px; }
       .site-footer-wrapper .site-footer .disclaimer .brand {
