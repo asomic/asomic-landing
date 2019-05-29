@@ -120,31 +120,51 @@ $(document).ready(function(){
   });
 
 // On hover
-  $('.quienes-somos .s-1').mouseover(function() {
-      $('.quienes-somos .img').css('background-image', 'url(../img/img-marcas.jpg)');
-  }).mouseout(function() {
-      $('.quienes-somos .img').css('background-image', 'url(../img/quienes-somos.jpg)');
+  $('.quienes-somos .s-1').hover(function() {
+    $('.quienes-somos .img').addClass('img-s1');
+    $('.quienes-somos .img').removeClass('img-s2 img-s3 img-s4 img-s5');
   });
-  $('.quienes-somos .s-2').mouseover(function() {
-      $('.quienes-somos .img').css('background-image', 'url(../img/img-app.jpg)');
-  }).mouseout(function() {
-      $('.quienes-somos .img').css('background-image', 'url(../img/quienes-somos.jpg)');
+  $('.quienes-somos .s-2').hover(function() {
+    $('.quienes-somos .img').addClass('img-s2');
+    $('.quienes-somos .img').removeClass('img-s1 img-s3 img-s4 img-s5');
   });
-  $('.quienes-somos .s-3').mouseover(function() {
-      $('.quienes-somos .img').css('background-image', 'url(../img/img-iot.jpg)');
-  }).mouseout(function() {
-      $('.quienes-somos .img').css('background-image', 'url(../img/quienes-somos.jpg)');
+  $('.quienes-somos .s-3').hover(function() {
+    $('.quienes-somos .img').addClass('img-s3');
+    $('.quienes-somos .img').removeClass('img-s1 img-s2 img-s4 img-s5');
   });
-  $('.quienes-somos .s-4').mouseover(function() {
-      $('.quienes-somos .img').css('background-image', 'url(../img/img-negocios.jpg)');
-  }).mouseout(function() {
-      $('.quienes-somos .img').css('background-image', 'url(../img/quienes-somos.jpg)');
+  $('.quienes-somos .s-4').hover(function() {
+    $('.quienes-somos .img').addClass('img-s4');
+    $('.quienes-somos .img').removeClass('img-s1 img-s2 img-s3 img-s5');
   });
-  $('.quienes-somos .s-5').mouseover(function() {
-      $('.quienes-somos .img').css('background-image', 'url(../img/img-empresas.jpg)');
-  }).mouseout(function() {
-      $('.quienes-somos .img').css('background-image', 'url(../img/quienes-somos.jpg)');
+  $('.quienes-somos .s-5').hover(function() {
+    $('.quienes-somos .img').addClass('img-s5');
+    $('.quienes-somos .img').removeClass('img-s1 img-s2 img-s3 img-s4');
   });
+  // $('.quienes-somos .s-1').mouseover(function() {
+  //     $('.quienes-somos .img').css('background-image', 'url(../img/img-marcas.jpg)');
+  // }).mouseout(function() {
+  //     $('.quienes-somos .img').css('background-image', 'url(../img/quienes-somos.jpg)');
+  // });
+  // $('.quienes-somos .s-2').mouseover(function() {
+  //     $('.quienes-somos .img').css('background-image', 'url(../img/img-app.jpg)');
+  // }).mouseout(function() {
+  //     $('.quienes-somos .img').css('background-image', 'url(../img/quienes-somos.jpg)');
+  // });
+  // $('.quienes-somos .s-3').mouseover(function() {
+  //     $('.quienes-somos .img').css('background-image', 'url(../img/img-iot.jpg)');
+  // }).mouseout(function() {
+  //     $('.quienes-somos .img').css('background-image', 'url(../img/quienes-somos.jpg)');
+  // });
+  // $('.quienes-somos .s-4').mouseover(function() {
+  //     $('.quienes-somos .img').css('background-image', 'url(../img/img-negocios.jpg)');
+  // }).mouseout(function() {
+  //     $('.quienes-somos .img').css('background-image', 'url(../img/quienes-somos.jpg)');
+  // });
+  // $('.quienes-somos .s-5').mouseover(function() {
+  //     $('.quienes-somos .img').css('background-image', 'url(../img/img-empresas.jpg)');
+  // }).mouseout(function() {
+  //     $('.quienes-somos .img').css('background-image', 'url(../img/quienes-somos.jpg)');
+  // });
 
   AOS.init({
     once: true

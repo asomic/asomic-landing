@@ -177,11 +177,21 @@ body
   overflow-x: hidden
   width: 100%
 
+// Animation unzoom
+@keyframes unzoom
+  from
+    // background-size: auto 120%
+    transform: scale(1.2, 1.2)
+  to
+    // background-size: auto 100%
+    transform: scale(1, 1)
+
 /* Header
 .presentacion
   color: white
   position: relative
   &::after
+    overflow: hidden
     content: ''
     top: 0
     left: 0
@@ -192,10 +202,13 @@ body
     z-index: -1
     position: absolute
     background: url('../img/background_asomic.jpg') center / cover, linear-gradient(130.92deg, #320073 6.18%, #0C5F93 39.91%, #2A0061 80.64%)
+    // background: url('../img/background_asomic.jpg') center / cover, linear-gradient(93.01deg, #050732 1.17%, #133561 96.68%)
     background-blend-mode: multiply
     background-size: cover
     background-repeat: no-repeat
     background-position: center
+    animation: unzoom 2s
+    animation-fill-mode: forwards
   header.main-header
     width: 100%
     margin: auto
@@ -477,7 +490,7 @@ body
       .branding
         a
           img
-            width: 150px
+            width: 142px
       .menu
         .the-menu
           a
@@ -496,10 +509,11 @@ body
     .intro-message
       // margin: auto
       max-width: 76.5%
-      padding-top: 140px
-      padding-bottom: 135px
-      padding-left: 80px
-      padding-right: 80px
+      // padding-top: 140px
+      // padding-bottom: 135px
+      // padding-left: 80px
+      // padding-right: 80px
+      padding: 140px 80px 135px 80px
       h1
         // width: 50%
         line-height: 60px
@@ -546,10 +560,11 @@ body
     .intro-message
       // margin: auto
       max-width: 71.5%
-      padding-top: 160px
-      padding-bottom: 170px
+      // padding-top: 160px
+      // padding-bottom: 170px
       // padding-left: 80px
       // padding-right: 80px
+      padding: 125px 80px 110px 80px
       h1
         // font-size: 46px
         // line-height: 62px
@@ -561,7 +576,8 @@ body
 /* Contenido
 .quienes-somos-wrapper
   .quienes-somos
-    background: linear-gradient(299.2deg, #090014 1.88%, #410C87 98.18%)
+    // background: linear-gradient(299.2deg, #090014 1.88%, #410C87 98.18%)
+    background: linear-gradient(93.01deg, #050732 1.17%, #133561 96.68%)
     border-radius: 5px 0 0 5px
     color: white
     margin: auto
@@ -610,7 +626,17 @@ body
         background-position: center
         background-size: cover
         position: relative
-        transition: all ease 0.2s
+        transition: all ease 0.3s
+      .img-s1
+        background-image: url('../img/img-marcas.jpg')
+      .img-s2
+        background-image: url('../img/img-app.jpg')
+      .img-s3
+        background-image: url('../img/img-iot.jpg')
+      .img-s4
+        background-image: url('../img/img-negocios.jpg')
+      .img-s5
+        background-image: url('../img/img-empresas.jpg')
 
 @media (min-width: 900px)
   .quienes-somos-wrapper
@@ -685,7 +711,7 @@ body
         padding: 62px 120px 62px 100px
         h6
           // line-height: 19px
-          font-size: 13px
+          // font-size: 12px
           // letter-spacing: 0.2em
           margin-bottom: 200px
         h3
@@ -708,8 +734,8 @@ body
         padding: 74px 120px 74px 100px
         h6
           // line-height: 19px
-          font-size: 14px
-          letter-spacing: 0.25em
+          // font-size: 14px
+          // letter-spacing: 0.25em
         h3
           // width: 100%
           // max-width: 400px
@@ -962,7 +988,8 @@ body
 
 /* Filosofia
 .filosofia
-  background: linear-gradient(284.08deg, #090014 1.88%, #410C87 98.18%)
+  // background: linear-gradient(284.08deg, #090014 1.88%, #410C87 98.18%)
+  background: linear-gradient(93.01deg, #050732 1.17%, #133561 96.68%)
   color: white
   width: 100%
   .data
@@ -1076,7 +1103,7 @@ body
       padding: 82px 60px 76px 29%
       h6
         // line-height: 19px
-        font-size: 13px
+        // font-size: 13px
         // letter-spacing: 0.2em
         margin-bottom: 200px
       h3
@@ -1096,7 +1123,7 @@ body
         // line-height: 19px
         // font-size: 13px
         // letter-spacing: 0.2em
-        font-size: 14px
+        // font-size: 14px
         letter-spacing: 0.25em
       h3
         // width: 100%
@@ -1384,7 +1411,8 @@ body
 
 /* Footer
 .site-footer-wrapper
-  background: linear-gradient(275.17deg, #090014 1.88%, #410C87 98.18%)
+  // background: linear-gradient(275.17deg, #090014 1.88%, #410C87 98.18%)
+  background: linear-gradient(93.01deg, #050732 1.17%, #133561 96.68%)
   .site-footer
     // background: linear-gradient(275.17deg, #090014 1.88%, #410C87 98.18%)
     padding: 62px 0 62px 0
@@ -1500,6 +1528,11 @@ body
         order: 3
         p
           color: $light-gray
+          margin: 0
+          img
+            margin-bottom: 2px
+            width: 20px
+            vertical-align: middle
       .rrss
         order: 2
         margin-bottom: 40px
@@ -1691,7 +1724,7 @@ body
         padding: 96px 0 74px
         .texto
           h6
-            font-size: 13px
+            // font-size: 13px
           h3
             width: 56%
             font-size: 28px
@@ -1707,11 +1740,13 @@ body
           img
         .copy
           p
+            // line-height: 10px
             font-size: 14px
         .rrss
           a
             img
-              width: 23px
+              width: 21px
+              margin-left: 24px
 
 @media (min-width: 1900px)
   .site-footer-wrapper
@@ -1730,7 +1765,7 @@ body
       .disclaimer
         .brand
           img
-            width: 130px
+            // width: 130px
         .copy
           p
         .rrss
