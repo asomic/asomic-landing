@@ -210,7 +210,7 @@
             <h6>Contacto</h6>
             <h3>
               Súbete a la nave, tenemos el equipamiento necesario para sacarle provecho al futuro.<br><br>
-              <a href="mailto:contacto@asomic.com">contacto@asomic.com</a>
+              <a href="mailto:contacto@asomic.com" id="clickCorreo">contacto@asomic.com</a>
             </h3>
           </div>
           <div class="formulario">
@@ -242,8 +242,6 @@
               </div>
 
               <button type="button" id="enviarContacto">Enviar</button>
-              {{-- <p style="color: transparent">Deploy test</p> --}}
-
             </form>
           </div>
         </section>
@@ -256,8 +254,6 @@
           <div class="copy">
             <p>
               <img src="{{ asset('/img/asomic_fav.png') }}">
-              {{-- &nbsp; --}}
-              {{-- asomic {{ date('Y') }}. --}}
               &nbsp;Hecho con ⚡ en Curicó, Chile.
             </p>
           </div>
