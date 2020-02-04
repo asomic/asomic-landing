@@ -7,6 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>asomic - Agencia Digital</title>
 
+    <!-- Link css new -->
+
+<link rel="stylesheet" href="{{ asset('/css/glide.core.min.css')}}">
+<link rel="stylesheet" href="{{ asset('/css/glide.core.min.css')}}">
+
+
+    <!-- Fin Link css new -->
+
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ asset('/fav/apple-touch-icon-57x57.png') }}" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('/fav/apple-touch-icon-114x114.png') }}" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('/fav/apple-touch-icon-72x72.png') }}" />
@@ -103,10 +111,6 @@
         <div class="quienes-somos">
           <div class="texto">
             <h6>Quienes Somos</h6>
-
-
-
-            
             <h3>
               Somos una agencia digital,
               creamos <span class="color-green selected-s s-1">marcas</span>,
@@ -161,6 +165,29 @@
         </div>
         <div class="img" data-aos="fade-right" data-aos-duration="1000"></div>
       </section>
+
+
+  <!--Inicio de prueba  -->
+
+
+  <div> 
+
+  <div class="glide">
+  <div class="glide__track" data-glide-el="track">...</div>
+  
+
+  <div class="glide__arrows" data-glide-el="controls">
+    <button class="glide__arrow glide__arrow--left" data-glide-dir="<<"><<</button>
+    <button class="glide__arrow glide__arrow--right" data-glide-dir=">>">>></button>
+  </div>
+</div>
+  
+  </div>
+
+<!--Fin Inicio de prueba  -->
+
+
+
 
       <section class="productos" id="proyectos">
         <h6 class="light-title">Proyectos Destacados</h6>
@@ -277,5 +304,16 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="{{ asset('/js/app.min.js') }}"></script>
+
+
+    <!-- Prueba de Scripts -->
+    <script src="{{ asset('/js/glide.min.js') }}"></script>
+
+    <script src="{{ asset('/js/n.glide.min.js') }}"></script>
+
+ 
+ <!-- Fin Prueba de Scripts -->
+
+
   </body>
 </html>
