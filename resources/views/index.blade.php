@@ -7,13 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>asomic - Agencia Digital</title>
 
-    <!-- Link css new -->
+    <!-- Link css new Prueba -->
 
-<link rel="stylesheet" href="{{ asset('/css/glide.core.min.css')}}">
-<link rel="stylesheet" href="{{ asset('/css/glide.core.min.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
 
 
-    <!-- Fin Link css new -->
+<!-- Compiled and minified Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<!-- Minified JS library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+
+    <!-- Fin Link css Pruba -->
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ asset('/fav/apple-touch-icon-57x57.png') }}" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('/fav/apple-touch-icon-114x114.png') }}" />
@@ -168,26 +179,115 @@
 
 
   <!--Inicio de prueba  -->
+  <br>
+  <br>
+  <br>
+  <br>
 
 
-  <div> 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
-  <div class="glide">
-  <div class="glide__track" data-glide-el="track">...</div>
-  
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+          <div class="col s12 m7">
+            <div class="card horizontal">
+              <div class="card-image">
+                <img src="img/prod-saga.jpg">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <h4>App Android/iOS</h4>
+        
+        <h1 class="black-text">Pura Sangre CrossFit</h1>
+        <br>
+  <br>
+  <br>
+  <br>
 
-  <div class="glide__arrows" data-glide-el="controls">
-    <button class="glide__arrow glide__arrow--left" data-glide-dir="<<"><<</button>
-    <button class="glide__arrow glide__arrow--right" data-glide-dir=">>">>></button>
+        <p>  Renovación de marca para SAGA Service, incluyó auditoria TI, de marca, 
+          rebranding y web corporativa adaptable a cualquier dispositivo.
+               </p>
+               </div>
+        
+      </div>
+    </div>
   </div>
+
+        </div>
+        <div class="item">
+              <div class="col s6 m7">
+                 <div class="card horizontal">
+                   <div class="card-image">
+                         <img src="img/prod-ps.jpg">
+                   </div>
+                   <div class="card-stacked">
+                        <div class="card-content">
+                        <h4>App Android/iOS</h4>
+        
+                       <h1 class="color-black">Pura Sangre CrossFit</h1>
+   <br>
+  <br>
+  <br>
+  <br>
+
+        <p> Con la app de Pura Sangre CrossFit puedes reservar horas en su box, confirmar asistencia,
+         ver el workout de las clases, tus compañeros asistentes y también revisar tus pagos.
+                  La app está diseñada y desarrollada para android e iOS.
+        </p>
+
+        </div>        
+      </div>
+    </div>
+  </div>
+        </div>
+        <div class="item">
+            <div class="col 6 m7">
+               <div class="card horizontal">
+                  <div class="card-image">
+                     <img src="img/prod-audito.jpg">
+                 </div>
+                     <div class="card-stacked">
+                        <div class="card-content">
+                 <h4>App Corporativa</h4>
+                  <h1 class="color-black">Audito</h1>
+               
+  <br>
+  <br>
+  <br>
+  <br>
+
+          <p>
+            Con la WebApp Audito, se puede gestionar clientes y servicios de una empresa contable,
+                además se obtiene información automatizada desde el SII, optimizando los tiempos y pudiendo
+                 acceder a ella desde cualquier dispositivo con internet.
+          </p>
+               </div>
+        
+      </div>
+    </div>
+  </div>
+
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
-  
-  </div>
-
-<!--Fin Inicio de prueba  -->
-
-
-
+<!--Fin  de prueba  -->
 
       <section class="productos" id="proyectos">
         <h6 class="light-title">Proyectos Destacados</h6>
@@ -303,17 +403,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="{{ asset('/js/app.min.js') }}"></script>
-
-
-    <!-- Prueba de Scripts -->
-    <script src="{{ asset('/js/glide.min.js') }}"></script>
-
-    <script src="{{ asset('/js/n.glide.min.js') }}"></script>
-
- 
- <!-- Fin Prueba de Scripts -->
-
+    <script src="{{ asset('/js/app.min.js') }}"></script>  
 
   </body>
 </html>

@@ -11,6 +11,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+
 html {
   height: 101%; }
 
@@ -58,6 +59,8 @@ p {
 
 .color-purple {
   color: #2B0063; }
+
+
 
 /* Effects */
 @-webkit-keyframes fadeIn {
@@ -1472,3 +1475,6 @@ body {
     max-width: 76%; }
     .site-footer-wrapper .site-footer .contacto {
       padding: 100px 0 86px; } }
+
+
+   
