@@ -53,6 +53,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/css/app.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/slider.css') }}">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -179,113 +180,101 @@
 
 
   <!--Inicio de prueba  -->
-  <br>
-  <br>
-  <br>
-  <br>
-
-
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div class="data">
+  <h2 class="h2">No es un trabajo cuando sientes pasión
+     por lo que haces.</h2>
+  </div>
+ <div id="myCarousel" class="carousel slide " data-ride="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
+    <ol class="carousel-indicators slidertest">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-        <div class="item active">
-          <div class="col s12 m7">
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="img/prod-saga.jpg">
+              <!-- Wrapper for slides -->     
+          
+              <div class="carousel-inner" data-aos="fade-right" data-aos-duration="1500">
+                  <div class="item active">
+                    <div class="col s12 m7">
+                      <div class="card horizontal">
+                          <div class="card-image">
+                          <img src="img/prod-saga.jpg">
+                          </div>
+                        <div class="card-stacked">
+                          <div class="card-content">
+                          <div class="data">
+                          <h6>APP CORPORATIVA</h6>
+                          <h4 class="titulo">SAGA Service</h4>
+                          <p classs="p">
+                          Renovación de marca para SAGA Service, incluyó auditoria TI, de marca,
+                           rebranding y web corporativa adaptable a cualquier dispositivo.                
+                          </p>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+                    </div>
+
+                  
+                  <div class="item ">
+                      <div class="col s6 m7">
+                          <div class="card horizontal">
+                                <div class="card-image">
+                                        <img src="img/prod-ps.jpg">
+                                </div>
+                              <div class="card-stacked">
+                                    <div class="card-content" >
+                                    <div class="data">
+                                    <h6 class="p">App Android/iOS</h6>                  
+                                    <h4 class="titulo">Pura Sangre CrossFit</h4>                                  
+
+                                    <p class="text"> Con la app de Pura Sangre CrossFit puedes reservar horas en su box, confirmar asistencia,
+                                            ver el workout de las clases, tus compañeros asistentes y también revisar tus pagos.
+                                                La app está diseñada y desarrollada para android e iOS.
+                                    </p>
+                                    </div>
+                                    </div>        
+                                </div>
+                            </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <div class="col 6 m7">
+                        <div class="card horizontal">
+                            <div class="card-image">
+                              <img src="img/prod-audito.jpg">
+                            </div>
+                              <div class="card-stacked">
+                                  <div class="card-content">
+                                  <div class="data">
+                            <h6 class="p">App Corporativa</h6>
+                            <h4 class="titulo">Audito</h4>  
+                             <p class="text">
+                          Con la WebApp Audito, se puede gestionar clientes y servicios de una empresa contable,
+                          además se obtiene información automatizada desde el SII, optimizando los tiempos y pudiendo
+                          acceder a ella desde cualquier dispositivo con internet.
+                            </p>
+                                  </div>
+                                  </div>
+                              </div>
+                        </div>
+                       </div>
+                  </div>
               </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h4>App Android/iOS</h4>
-        
-        <h1 class="black-text">Pura Sangre CrossFit</h1>
-        <br>
-  <br>
-  <br>
-  <br>
-
-        <p>  Renovación de marca para SAGA Service, incluyó auditoria TI, de marca, 
-          rebranding y web corporativa adaptable a cualquier dispositivo.
-               </p>
-               </div>
-        
-      </div>
-    </div>
-  </div>
-
-        </div>
-        <div class="item">
-              <div class="col s6 m7">
-                 <div class="card horizontal">
-                   <div class="card-image">
-                         <img src="img/prod-ps.jpg">
-                   </div>
-                   <div class="card-stacked">
-                        <div class="card-content">
-                        <h4>App Android/iOS</h4>
-        
-                       <h1 class="color-black">Pura Sangre CrossFit</h1>
-   <br>
-  <br>
-  <br>
-  <br>
-
-        <p> Con la app de Pura Sangre CrossFit puedes reservar horas en su box, confirmar asistencia,
-         ver el workout de las clases, tus compañeros asistentes y también revisar tus pagos.
-                  La app está diseñada y desarrollada para android e iOS.
-        </p>
-
-        </div>        
-      </div>
-    </div>
-  </div>
-        </div>
-        <div class="item">
-            <div class="col 6 m7">
-               <div class="card horizontal">
-                  <div class="card-image">
-                     <img src="img/prod-audito.jpg">
-                 </div>
-                     <div class="card-stacked">
-                        <div class="card-content">
-                 <h4>App Corporativa</h4>
-                  <h1 class="color-black">Audito</h1>
-               
-  <br>
-  <br>
-  <br>
-  <br>
-
-          <p>
-            Con la WebApp Audito, se puede gestionar clientes y servicios de una empresa contable,
-                además se obtiene información automatizada desde el SII, optimizando los tiempos y pudiendo
-                 acceder a ella desde cualquier dispositivo con internet.
-          </p>
-               </div>
-        
-      </div>
-    </div>
-  </div>
-
-        </div>
-    </div>
+                 
+  
 
     <!-- Controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-    </a>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
 </div>
 <!--Fin  de prueba  -->
 
