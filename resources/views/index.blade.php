@@ -53,7 +53,12 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/css/app.min.css') }}">
+    <!-- New doc css -->
     <link rel="stylesheet" href="{{ asset('/css/slider.css') }}">
+
+    <!-- prueba css -->
+    <link rel="stylesheet" href="{{ asset('/css/prueba.css') }}">
+    <!-- fin pruebas css-->
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -177,12 +182,13 @@
         </div>
         <div class="img" data-aos="fade-right" data-aos-duration="1000"></div>
       </section>
-
-
-  <!--Inicio de prueba  -->
-  <div class="data">
-  <h2 class="h2">No es un trabajo cuando sientes pasión
-     por lo que haces.</h2>
+      
+      <!--Inicio de prueba  --> 
+  <div class="pru"> 
+ <p >Proyectos Destacados</p>
+ </div>
+  <div class="dataa">    
+  <h2 >No es un trabajo cuando sientes pasión por lo que haces.</h2> 
   </div>
  <div id="myCarousel" class="carousel slide " data-ride="carousel">
     <!-- Indicators -->
@@ -192,25 +198,26 @@
         <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
 
-              <!-- Wrapper for slides -->     
-          
+              <!-- Wrapper for slides -->              
               <div class="carousel-inner" data-aos="fade-right" data-aos-duration="1500">
-                  <div class="item active">
+                  <div class="item active" >
                     <div class="col s12 m7">
-                      <div class="card horizontal">
-                          <div class="card-image">
-                          <img src="img/prod-saga.jpg">
-                          </div>
+                      <div class="card horizontal">                       
+                          <div class="card-image">                                                    
+                          <img src="img/prod-saga.jpg" width="100%">                                                         
+                          </div>                       
                         <div class="card-stacked">
                           <div class="card-content">
                           <div class="data">
-                          <h6>APP CORPORATIVA</h6>
+                        
+                          <h6>BRANDING - WEB</h6>
                           <h4 class="titulo">SAGA Service</h4>
                           <p classs="p">
                           Renovación de marca para SAGA Service, incluyó auditoria TI, de marca,
                            rebranding y web corporativa adaptable a cualquier dispositivo.                
                           </p>
-                          </div>
+                         
+                          </div >  
                           </div>
                         </div>
                       </div>
