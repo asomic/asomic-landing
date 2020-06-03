@@ -19,6 +19,10 @@ Route::get('/politica-privacidad-ps', function () {
     return view('pp-purasangre');
 });
 
+Route::get('/agroqlik/privacidad', function () {
+    return view('pp-agroqlik');
+});
+
 Route::post('/enviado', 'MailController@sendmail')->name('ruta');
 
 // Route::get('/prueba', function(){
